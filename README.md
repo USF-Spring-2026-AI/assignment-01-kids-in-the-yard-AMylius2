@@ -1,9 +1,9 @@
 # AI Assignment 01 - Kids in the Yard
 
-##Link to the reflection:
+**Link to the reflection:**
  https://docs.google.com/document/d/1njP9O0FZ_oSJZa7VCYJ8dwpaCRKZ_z065ErJTa5PPJQ/edit?usp=sharing
 
-##Answers to the Comparison Questions:
+**Answers to the Comparison Questions:**
 
     1. I used ChatGPT for this assignment.
     
