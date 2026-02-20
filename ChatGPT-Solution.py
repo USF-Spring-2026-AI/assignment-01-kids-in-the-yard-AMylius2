@@ -77,7 +77,7 @@ class PersonFactory:
             with open("birth_and_marriage_rates.csv") as f:
                 reader = csv.DictReader(f)
                 for row in reader:
-                    decade = int(row["decade"])
+                    decade = int(row["decade"].rstrip('s'))
                     self.marriage_rates[decade] = float(row["marriage_rate"])
                     self.birth_rates[decade] = float(row["birth_rate"])
 
