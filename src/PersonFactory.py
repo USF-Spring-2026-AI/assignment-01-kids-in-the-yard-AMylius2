@@ -6,6 +6,7 @@ def randfloat():
     return float(random.randint(0, 1000) - 1) / 1000
 class PersonFactory:
     def __init__(self):
+        """initializes variables used in personFactory object by reading files"""
         print("reading files...")
 
         # set up rank-to-probability list
@@ -81,6 +82,7 @@ class PersonFactory:
                 year = int(data[0].rstrip('s'))
                 self.life_expectancy[year] = float(data[1])
 
+    # minor getter, setter, and helper methods
     def get_decade(self, year):
         return year - year % 10
 
@@ -91,6 +93,7 @@ class PersonFactory:
         return randfloat() < self.rates[decade][1]
 
     def choose_last_name(self, decade):
+        """method which chooses a last name from a list of last names ranked by popularity for each decde"""
         # since the probabilities in the rank_to_probability.csv only add to 71.91%, the algorithm has been modified
         # so that .7191 is the highest value that can be rolled here
         threshold = float(random.randint(1, 7191) - 1) / 10000
@@ -101,6 +104,7 @@ class PersonFactory:
                 return self.last_names[decade][i]
 
     def choose_first_name(self, decade):
+        """method which chooses a first name from a list randomly"""
         roll = randfloat()
         if roll < 0.5:
             name_dict = self.male_names
@@ -115,6 +119,7 @@ class PersonFactory:
                 return item[0]
 
     def get_person(self, born, family_name="", partner=None):
+        """creates a person randomly or based on a set family name or partner"""
 
         # calculate decade of birth and year of death
         decade = self.get_decade(born)

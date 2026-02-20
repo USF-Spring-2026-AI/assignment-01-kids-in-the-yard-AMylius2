@@ -40,6 +40,7 @@ def main():
 class FamilyTree:
 
     def __init__(self):
+        """initializes family tree object"""
         self.pf = PersonFactory()
         self.root_person_one = self.pf.get_person(1950)
         self.root_person_two = self.pf.get_person(1950)

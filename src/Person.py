@@ -1,6 +1,7 @@
 class Person:
 
     def __init__(self, born, died, first_name, last_name):
+        """initializes person object"""
         self.born = born
         self.died = died
         self.first_name = first_name
@@ -8,6 +9,7 @@ class Person:
         self.partner = None
         self.children = []
 
+    # minor getter, setter, and helper methods
     def add_child(self, child):
         self.children.append(child)
 
